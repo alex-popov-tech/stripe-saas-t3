@@ -5,7 +5,7 @@ import { DownloadButton } from "./_components/downloadButton";
 export default async function PhotosPage() {
   const svgs = await fs.readdir("public/icons");
   return (
-    <main className="grid grid-cols-5 gap-5 p-6">
+    <main className="grid gap-5 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
       {svgs.map((svgpath) => (
         <div
           key={svgpath}
