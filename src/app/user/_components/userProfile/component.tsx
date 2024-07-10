@@ -16,14 +16,6 @@ export async function UserProfile() {
   const isSubscriptionActive: boolean | undefined = customer.data?.plan_active;
   const totalDownloads: number | undefined = customer.data?.total_downloads;
 
-  console.log({
-    userId,
-    userEmail,
-    subscriptionId,
-    isSubscriptionActive,
-    totalDownloads,
-  });
-
   return (
     <div className="mockup-code w-fit overflow-hidden">
       <pre data-prefix="$">

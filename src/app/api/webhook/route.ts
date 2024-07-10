@@ -7,8 +7,6 @@ import { handlers } from "./handlers";
 export async function POST(req: Request) {
   const rawBody = await req.text();
   const signature = req.headers.get("stripe-signature");
-  console.log({ rawBody });
-  console.log({ signature });
   let event;
   try {
     event = stripe.webhooks.constructEvent(
@@ -25,7 +23,6 @@ export async function POST(req: Request) {
     );
   }
 
-  console.log(JSON.stringify(event));
   const handler: (event: Stripe.Event) => Promise<NextResponse> =
     // @ts-expect-error i don't want to write handlers for every event can you just shut up
     handlers[event.type];

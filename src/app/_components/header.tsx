@@ -16,11 +16,6 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/icons" className="btn mx-3">
-              NFT Icons
-            </Link>
-          </li>
-          <li>
             <Link href="/user" className="btn">
               User
             </Link>

@@ -21,7 +21,6 @@ const signup = async ({ refresh }: { refresh: () => void }) => {
     console.error(error);
   } else {
     toast.success("You successfully signed up and logged in!");
-    console.log(data);
     refresh();
   }
 };
